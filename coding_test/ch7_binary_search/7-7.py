@@ -17,4 +17,4 @@ for i in request:
     else:
         print('no', end = ' ')
         
-    
+ # f.close()   
