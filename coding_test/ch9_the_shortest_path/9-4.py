@@ -32,6 +32,6 @@ if distance >= INF:
 else:
     print(distance)
 
-f.close()
+# f.close()
 
 
