@@ -1,57 +1,118 @@
-n,m = map(int, input().split())
+# 어려운 문제 다시풀기
 
-d = [[0]*m for _ in range(n)] # 맵 초기화 n*m 2차원 행렬
 
-x,y,direction = map(int,input().split())
-d[x][y] = 1
 
-array = []
 
-for i in range(n):
-    array.append(list(map(int,input().split())))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# n,m = map(int,input().split())
+
+# a,b,d = map(int,input().split())
+
+# maps = []
+
+# visited =[[0] * m for _ in range(n)] # 방문한 위치를 저장하기 위함
+
+# visited[a][b] = 1 
+
+# for i in range(n):
     
-dx = [-1,0,1,0]
-dy = [0,1,0,-1]
+#     maps.append(list(map(int,input().split())))
 
-def turn_left():
-    global direction
-    direction -= 1
-    if direction == -1:
-        direction = 3
-        
-count = 1
-turn_time = 0
+# da = [0,1,0,-1] # 북동남서 d와 인덱스 맞춰주기 위해
+# db = [-1,0,1,0]
 
-while True:
-    turn_left()
-    nx = x + dx[direction]
-    ny = y + dy[direction]
+
+# def turn_left(): # 회전함수 구현해두기
+#     global d
+#     d -= 1
+#     if d == -1:
+#         d = 3
+        
+# count = 1
+# turn_time = 0 # 4가 되면 돌아가야 돼
+
+# while True:
     
-    if d[nx][ny] == 0 and array[nx][ny] == 0:
-        d[nx][ny] = 1
-        x = nx
-        y = ny
-        count += 1
-        turn_time = 0
-        continue
+#     turn_left()
+#     na = a + da[d] # next a
+#     nb = b + db[d]
     
-    else:
-        turn_time += 1
+#     if visited[na][nb] == 0 and maps[na][nb] == 0:  # 방문하지 않은 육지이면
         
-    if turn_time == 4:
+#         count += 1
+#         visited[na][nb] = 1
+#         a,b = na,nb
+#         turn_time =0
+#         continue # 이게 중요하지
     
-        nx = x - dx[direction]
-        ny = y - dy[direction]
+#     else:
+#         turn_time += 1
         
-        if array[nx][ny] == 0:
-            x = nx
-            y = ny
+#     if turn_time == 4:
         
-        else:
-            break
-        turn_time = 0
+#         na = a - da[d]
+#         nb = b - db[d]
         
-print(count)
+#         if maps[na][nb] == 0: # 뒤로 갈 수 있으면 뒤로가기
+            
+#             a,b = na,nb
+#             turn_time = 0 # 뒤로 갔으므로 turn_time 초기화
+            
+#         else:
+#             break
+        
+# print(count)
         
         
         
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
