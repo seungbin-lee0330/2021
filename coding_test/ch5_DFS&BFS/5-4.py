@@ -7,4 +7,4 @@ def recursive_function(i):
     recursive_function(i+1)
     print(i, '번째 재귀 함수를 종료합니다')
     
-recursive_function(1)
+recursive_function(1) # 재귀함수의 수행은 스택 자료구조를 이용한다. 따라서 100번째 재귀함수부터 차례대로 종료된다.

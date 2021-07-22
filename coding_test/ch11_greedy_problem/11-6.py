@@ -44,7 +44,7 @@
 #         length -= 1
 #         previous = now
         
-#     result = sorted(q,key = lambda x:x[1]) # 음식번호 기준으로 정렬하는 방법
+#     result = sorted(q,key = lambda x:x[1]) # lambda 는 익명함수이고 음식번호 기준으로 정렬하는 방법
 #     return result[(k - sum_value) % length][1]
 
 

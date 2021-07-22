@@ -1,6 +1,6 @@
 from collections import deque
 
-def bfs(graph, start, visited):
+def bfs(graph, start, visited): # 너비 우선 탐색, 가까운 노드부터 탐색하는 알고리즘
     
     queue = deque([start])
     

@@ -1,4 +1,4 @@
-graph = [[] for _ in range(3)]
+graph = [[] for _ in range(3)] # 인접 리스트는 .append를 사용한다
 
 graph[0].append((1,7))
 graph[0].append((2,5))

@@ -6,11 +6,11 @@ def factorial_iterative(n):
         
     return result
 
-def factorial_recursive(n):
+def factorial_recursive(n): # 재귀함수의 표현법이 훨씬 간결하다
     if n <= 1:
-        return 1
+        return 1 # 재귀함수의 종료조건은 n이 1 이하일 때다.
     
     return n * factorial_recursive(n-1)
 
 print('반복적으로 구현' , factorial_iterative(5))
-print('재귀적으로 구현' , factorial_recursive(5))
+print('재귀적으로 구현' , factorial_recursive(5)) 

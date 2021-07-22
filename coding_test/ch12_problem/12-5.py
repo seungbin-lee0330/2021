@@ -59,7 +59,7 @@ def simulate():
         x,y = nx,ny
         time += 1
         
-        if time == dir_info[index][0]: # index가 l보다 작다는 조건 필요한가...
+        if index < l and time == dir_info[index][0]: # index가 l보다 작다는 조건 필요한가... 없어도 될듯
             direction = turn(direction,dir_info[index][1])  
             index += 1
     return time
