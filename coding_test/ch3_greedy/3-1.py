@@ -1,3 +1,4 @@
+# 해결
 
 
 
@@ -26,6 +27,6 @@
 
 # for coin in coin_types:
 #     count += n // coin
-#     n %= coin # 신경쓰기
+#     n %= coin # 나머지만 가져가는 점 신경쓰기
     
 # print(count)

@@ -1,3 +1,6 @@
+# for문을 쓰지 않는 방법을 생각
+
+
 
 
 
@@ -28,16 +31,23 @@
 
 # n,m,k = map(int,input().split())
 
-# data = list(map(int,input().split())) # 입력받은 값들을 data라고 정의해주기
+# array = list(map(int,input().split()))
 
-# data.sort()
+# array.sort()
 
-# first = data[-1]
-# second = data[-2]
+# first = array[-1]
+# second = array[-2]
 
 # result = 0
 
-# count = int
+# count = m // (k+1) * k
+# count += m % (k+1) # 나머지도 더해줘야 함을 잊지 말자
+
+
+# result += count * first
+# result += (m-count) * second
+
+# print(result)
 
 
 
@@ -54,20 +64,61 @@
 
 
 
+
+
+
+
+
+
+
+# n,m,k = map(int,input().split())
+
+# array = list(map(int,input().split()))
+
+# array.sort()
+
+# first = array[-1]
+# second = array[-2]
+
+# result = 0
 
 # while True:
+    
 #     for i in range(k):
+        
 #         if m == 0:
 #             break
+        
 #         result += first
 #         m -= 1
         
 #     if m == 0:
 #         break
 #     result += second
-#     m -= 1
     
 # print(result)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

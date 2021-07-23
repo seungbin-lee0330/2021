@@ -36,7 +36,7 @@ for i in range(n):
     min_value = 10001
     
     for j in data:
-            min_value = min(min_value,j) # 굳이 이렇게 할 필요가 있을까
+            min_value = min(min_value,j) # 굳이 이렇게 할 필요가 있을까 그냥 연습하는거지 더 비효율적인거 같음
              
     result = max(result, min_value)
     
