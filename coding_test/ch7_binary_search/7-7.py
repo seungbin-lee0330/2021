@@ -2,18 +2,13 @@
 # input = f.readline
 
 n = int(input())
-
-array = set(map(int,input().split()))
-
+store = set(map(int,input().split())) # set는 중괄호 {} 로 표현된다
 m = int(input())
-
 request = list(map(int, input().split()))
 
 for i in request:
-    
-    if i in array:
+    if i in store:
         print('yes' , end = ' ')
-        
     else:
         print('no', end = ' ')
         
