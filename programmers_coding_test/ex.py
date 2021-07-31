@@ -1,3 +1,3 @@
-tmp = [9,2,5,4,4,3,2,12,23,12,63,23,64]
-a = set(tmp)
-print(a)
+s = 'asdgb'
+s = s[5:]
+print(len(s))
