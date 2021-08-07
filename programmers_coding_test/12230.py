@@ -1,38 +1,19 @@
-def solution(answers):
+def solution(answers): 
     
-    answer = []
-    one = [1,2,3,4,5] * 2000
-    two = [2,1,2,3,2,4,2,5] * 1250
-    three = [3,3,1,1,2,2,4,4,5,5] * 1000
+    one = [1,2,3,4,5] # 패턴은 나머지로 처리해버리기
+    two = [2,1,2,3,2,4,2,5] 
+    three = [3,3,1,1,2,2,4,4,5,5] 
+    score = [0,0,0] # score를 리스트로 한번에 관리하자
+    result = [] 
     
-    count_one = 0
-    count_two = 0
-    count_three = 0
-    
-    for i in range(len(answers)):
-        
-        if answers[i] == one[i]:
-            count_one += 1
-            
-        if answers[i] == two[i]:
-            count_two += 1
-            
-        if answers[i] == three[i]:
-            count_three += 1
-            
-    count_set = [count_one,count_two,count_three]
-    count_max = max(count_set)
-
-    if count_one == count_max:
-
-        answer.append(1)
-
-    if count_two == count_max:
-
-        answer.append(2)
-
-    if count_three == count_max:
-
-        answer.append(3)
-
-    return answer
+    for idx,answer in enumerate(answers): # enumerate로 index와 값 동시에 받기
+        if answer == one[idx % len(one)]:
+            score[0] += 1
+        if answer == two[idx % len(two)]:
+            score[1] += 1
+        if answer == three[idx % len(three)]:
+            score[2] += 1
+    for idx,s in enumerate(score):
+        if s == max(score):
+            result.append(idx+1)
+    return result

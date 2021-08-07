@@ -1,3 +1,3 @@
-s = 'asdgb'
-s = s[5:]
-print(len(s))
+a = [1,34,252,34,2341]
+a = sorted(a,reverse=True)
+print(a)
