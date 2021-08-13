@@ -1,5 +1,4 @@
 def recursive_function(i):
-    
     if i == 100:
         return
     

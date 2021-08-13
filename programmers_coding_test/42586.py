@@ -1,4 +1,4 @@
-def solution(progresses, speeds):
+def solution(progresses, speeds):  # 어려웠다
     print(progresses)
     print(speeds)
     answer = []

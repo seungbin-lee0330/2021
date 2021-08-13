@@ -22,7 +22,6 @@ def solution(numbers, hand):
             rPos = key_dict[rhand]
             ldist = abs(curPos[0]-lPos[0]) + abs(curPos[1]-lPos[1]) # 행사이의 거리와 열사이의 거리 계산
             rdist = abs(curPos[0]-rPos[0]) + abs(curPos[1]-rPos[1])
-
             if ldist < rdist:
                 answer += 'L'
                 lhand = i

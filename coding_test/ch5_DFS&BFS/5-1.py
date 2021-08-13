@@ -11,3 +11,4 @@ stack.pop()
 
 print(stack)
 print(stack[::-1]) # a와 b가 none 이므로 시작부터 끝까지 -1 이므로 역순으로 최상단 원소부터 출력
+# 리스트 순서를 바꾸는방법 reverse와는 다르다!!!!!!!!!!!!!

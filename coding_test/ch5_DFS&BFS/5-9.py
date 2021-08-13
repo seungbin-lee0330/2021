@@ -3,14 +3,10 @@ from collections import deque
 def bfs(graph, start, visited): # 너비 우선 탐색, 가까운 노드부터 탐색하는 알고리즘
     
     queue = deque([start])
-    
     visited[start] = True
-    
     while queue:
-        
         v = queue.popleft() # 큐에서 하나의 원소를 뽑아 출력
         print(v, end = ' ') # 한칸 띄우고 출력을 종료
-        
         for i in graph[v]:
             if not visited[i]:
                 queue.append(i)
@@ -28,6 +24,5 @@ graph = [
     [1,7]
 ]
 
-visited = [False] * 9
-
+visited = [False] * 9  # 1부터 8까지 방문표시 확인
 bfs(graph, 1, visited)

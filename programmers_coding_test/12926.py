@@ -5,5 +5,4 @@ def caesar(s, n):
             s[i]=chr((ord(s[i])-ord('A')+ n)%26+ord('A')) # 나머지를 사용한 표기법
         elif s[i].islower():
             s[i]=chr((ord(s[i])-ord('a')+ n)%26+ord('a'))
-
     return "".join(s)

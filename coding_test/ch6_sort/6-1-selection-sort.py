@@ -1,4 +1,4 @@
-
+# 선택정렬 시간복잡도 n^2
 
 #array = [7,5,9,0,3,1,6,2,4,8]
 
@@ -9,5 +9,4 @@
 #             min_index = j # 더 작은 값이 있다면 대체
             
 #     array[i], array[min_index] = array[min_index], array[i] # 스왑
-    
 # print(array)

@@ -1,12 +1,9 @@
 s = input() # 문자열 이니까
-
 result = int(s[0])  # 문자열을 숫자로 바꾸는 방법
 
 for i in range(1,len(s)): # len(s) 에는 마지막 줄바꿈이 포함되어 있어서 저렇게 쓰는게 맞다
-    
-    if int(s[i]) <= 1 or result <= 1:
+    if int(s[i]) <= 1 or result <= 1: # result 가 1보다 작거나 같을때도 더하거나 곱하는게 맞지
         result += int(s[i])
-        
     else:
         result *= int(s[i])
         

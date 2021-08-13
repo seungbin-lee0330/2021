@@ -1,5 +1,3 @@
-# 왜 오답나오지...
-
 n = int(input())
 k = int(input())
 data = [[0] * (n+1) for _ in range(n+1)] # 맵 정보
@@ -11,7 +9,7 @@ l = int(input())
 for _ in range(l): # 시간과 방향정보
     x,c = input().split()
     dir_info.append((int(x),c)) # x는 숫자 c는 문자 
-dx = [1,0,-1,0] # 우하좌상으로 해야지
+dx = [1,0,-1,0] # 동남서북 으로 해야지
 dy = [0,-1,0,1]
 
 def turn(direction,c):
@@ -34,7 +32,7 @@ def simulate():
         if 1 <= nx <= n and 1 <= ny <= n and data[nx][ny] != 2: # 맵 안에 있고 뱀의 몸통이 아닌 위치인 경우
             if data[nx][ny] == 0:
                 data[nx][ny] = 2
-                q.append((nx,ny)) # q도 그냥 이렇게 쓰면 된다
+                q.append((nx,ny))
                 px,py = q.pop(0) # 사과가 없다면 꼬리를 빼버리고 맵에서도 제거한다
                 data[px][py] = 0 
             elif data[nx][ny] == 1:
@@ -45,8 +43,7 @@ def simulate():
             break
         x,y = nx,ny
         time += 1
-        if index < l and time == dir_info[index][0]: 
-            # index가 1이 아닌 l보다 작다는 조건 없어도 될듯
+        if index < l and time == dir_info[index][0]: # index가 l보다 작다는 조건 필요한가... 없어도 될듯
             direction = turn(direction,dir_info[index][1])  
             index += 1
     return time

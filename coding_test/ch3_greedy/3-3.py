@@ -1,4 +1,4 @@
-# 다시 풀어보기
+# 해결
 
 
 
@@ -26,15 +26,11 @@
 
 
 
-n,m = map(int,input().split())
+# n,m = map(int,input().split())
+# result = 0
 
-result = 0
-
-for i in range(n):
-    data = list(map(int,input().split()))
-    
-    min_value = min(data)
-    
-    result = max(result,min_value)
-    
-print(result)
+# for i in range(n):
+#     data = list(map(int,input().split()))
+#     min_value = min(data)
+#     result = max(result,min_value) # 아이디어
+# print(result)

@@ -26,17 +26,14 @@
 
 
 n = int(input())
-
 data = list(map(int,input().split()))
-
 data.sort()
-
 target = 1
 
 for i in data:
-    if target < i :
+    if target < i : # 1원부터 계속 확인하는거지
         break
-    target += i
+    target += i 
     
 print(target)
     
