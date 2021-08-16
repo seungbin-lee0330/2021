@@ -1,39 +1,28 @@
 # 어렵다...
-
 from collections import deque
-
 n,l,r = map(int,input().split())
-
 graph = []
-
 for _ in range(n):
-    graph.append(list(map(int,input().split())))
-    
+    graph.append(list(map(int,input().split())))    
 dx = [0,0,-1,1] # 상하좌우
 dy = [-1,1,0,0]
-
 result = 0
 
 def process(x,y,index):
-    
-    united = []
+    united = [] # 연합
     united.append((x,y))
     q = deque()
     q.append((x,y))
     union[x][y] = index
     summary = graph[x][y]
     count = 1
-    
     while q:
         x,y = q.popleft()
-        for i in range(4):
+        for i in range(4):  # 인접한 국가 완전탐색
             nx = x + dx[i]
             ny = y + dy[i]
-            
             if 0 <= nx < n and 0 <= ny < n and union[nx][ny] == -1:
-                
-                if l <= abs(graph[nx][ny] - graph[x][y]) <= r:
-                    
+                if l <= abs(graph[nx][ny] - graph[x][y]) <= r: 
                     q.append((nx,ny))
                     union[nx][ny] = index
                     summary += graph[nx][ny]
@@ -52,8 +41,7 @@ while True:
         for j in range(n):
             if union[i][j] == -1:
                 process(i,j,index)
-                index += 1
-                
+                index += 1    
     if index == n * n:
         break
     total_count += 1
